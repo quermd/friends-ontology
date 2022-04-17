@@ -16,7 +16,7 @@
         <dc:creator>Quer Masagué Deu</dc:creator>
         <dc:title>Friends TV Series ontology</dc:title>
         <terms:contributor>Quer Masagué Deu</terms:contributor>
-        <terms:license>http://creativecommons.org/licenses/by/2.0/</terms:license>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.7</owl:versionInfo>
     </owl:Ontology>
     
@@ -981,7 +981,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/NBC">
         <rdf:type rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Platform"/>
-        <hasPlatformName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NBC</hasPlatformName>
+        <hasPlatformName>NBC</hasPlatformName>
     </owl:NamedIndividual>
     
 
@@ -991,7 +991,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/S03E21">
         <rdf:type rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#TelevisionEpisode"/>
         <Friends-ontology:isEpisodeOf rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Season3"/>
-        <hasEpisodeSynopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pete offers Monica the head chef job at a new restaurant he just bought, but she suspects he is using it to woo her. When he insists he is over her and has met someone else, Phoebe correctly surmises he is lying. While Pete and Monica inspect the restaurant, Monica realizes Pete&apos;s true motive, then surprisingly discovers she has genuine feelings for him. Joey and Chandler adopt a chick and a duck. When Rachel struggles to get ready for a work event due to a broken rib, Ross tries to assist her, then ultimately skips being on a panel for the Discovery Channel to take her to a hospital when he realizes she is in too much pain to attend the event. This leaves her touched by what he gave up to help her, and she is left feeling positive about him for the first time in a long time.</hasEpisodeSynopsis>
+        <hasEpisodeSynopsis>Pete offers Monica the head chef job at a new restaurant he just bought, but she suspects he is using it to woo her. When he insists he is over her and has met someone else, Phoebe correctly surmises he is lying. While Pete and Monica inspect the restaurant, Monica realizes Pete&apos;s true motive, then surprisingly discovers she has genuine feelings for him. Joey and Chandler adopt a chick and a duck. When Rachel struggles to get ready for a work event due to a broken rib, Ross tries to assist her, then ultimately skips being on a panel for the Discovery Channel to take her to a hospital when he realizes she is in too much pain to attend the event. This leaves her touched by what he gave up to help her, and she is left feeling positive about him for the first time in a long time.</hasEpisodeSynopsis>
         <hasEpisodeTitle>The One With A Chick And A Duck</hasEpisodeTitle>
         <Friends-ontology:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Friends-ontology:hasDuration>
         <Friends-ontology:hasEmissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-04-17T00:00:00</Friends-ontology:hasEmissionDate>
@@ -1014,7 +1014,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Chick">
         <rdf:type rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Pet"/>
         <hasMaster rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/Joey"/>
-        <hasPetName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chick</hasPetName>
+        <hasPetName>Chick</hasPetName>
     </owl:NamedIndividual>
     
 
@@ -1035,7 +1035,7 @@
         <Friends-ontology:hasSeason rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Season9"/>
         <Friends-ontology:hasGenre>Sitcom</Friends-ontology:hasGenre>
         <Friends-ontology:hasNumberOfSeasons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Friends-ontology:hasNumberOfSeasons>
-        <Friends-ontology:hasSynopsis>Episodes depict the friends&apos; comedic and romantic adventures and career issues, such as Joey auditioning for roles or Rachel seeking jobs in the fashion industry. The six characters each have many dates and serious relationships, such as Monica with Richard Burke and Ross with Emily Waltham. Ross and Rachel&apos;s intermittent relationship is the most often-recurring storyline; during the ten seasons of the show, they repeatedly date and break up. Over the course of the series, Ross briefly marries Emily, Ross and Rachel have a child together after a one-night stand, Chandler and Monica date and marry each other, and Phoebe marries Mike Hannigan. Other frequently recurring characters include Ross and Monica&apos;s parents Jack and Judy Geller from Long Island; Ross&apos;s ex-wife Carol Willick, their son Ben Geller, and Carol&apos;s lesbian partner Susan Bunch; Central Perk barista Gunther; Chandler&apos;s extremely annoying and obnoxious but good-natured ex-girlfriend Janice Goralnik; and Phoebe&apos;s evil twin sister Ursula.</Friends-ontology:hasSynopsis>
+        <Friends-ontology:hasSynopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Episodes depict the friends comedic and romantic adventures and career issues.</Friends-ontology:hasSynopsis>
         <Friends-ontology:hasTitle>Friends</Friends-ontology:hasTitle>
         <rdfs:comment xml:lang="en">Friends ontology</rdfs:comment>
         <rdfs:sameAs xml:lang="en">https://dbpedia.org/page/Friends</rdfs:sameAs>
@@ -1077,7 +1077,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#S01E01">
         <rdf:type rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#TelevisionEpisode"/>
         <Friends-ontology:isEpisodeOf rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Season1"/>
-        <hasEpisodeSynopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After leaving her fiancé, Barry, at the altar, Rachel finds herself in Central Perk Café, soaking wet in her wedding dress, looking for her old friend Monica. Rachel ends up moving into Monica&apos;s New York apartment. Chandler and Joey, who live across the hall from Monica, console Ross after his wife Carol, has just left him for a woman. Monica, a chef, falls for &quot;Paul the Wine Guy&quot; only to be crushed that their night of passion was merely a one-night stand. The gang urge Rachel to be more independent by cutting up her father&apos;s credit cards. Rachel, who has never worked before, is offered a waitress job at Central Perk. Ross, who has had a crush on Rachel since high school, asks her out.</hasEpisodeSynopsis>
+        <hasEpisodeSynopsis>After leaving her fiancé, Barry, at the altar, Rachel finds herself in Central Perk Café, soaking wet in her wedding dress, looking for her old friend Monica. Rachel ends up moving into Monica&apos;s New York apartment. Chandler and Joey, who live across the hall from Monica, console Ross after his wife Carol, has just left him for a woman. Monica, a chef, falls for &quot;Paul the Wine Guy&quot; only to be crushed that their night of passion was merely a one-night stand. The gang urge Rachel to be more independent by cutting up her father&apos;s credit cards. Rachel, who has never worked before, is offered a waitress job at Central Perk. Ross, who has had a crush on Rachel since high school, asks her out.</hasEpisodeSynopsis>
         <hasEpisodeTitle>&quot;Pilot&quot;
 &quot;The One Where Monica Gets a Roommate&quot;
 &quot;The One Where It All Began&quot;
@@ -1231,6 +1231,15 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Series"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#TelevisionEpisode"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#TelevisionSeason"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Event"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#InSeriesSeries"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Job"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Place"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
