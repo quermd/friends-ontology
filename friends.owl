@@ -40,12 +40,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.7</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="Being"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Fictional"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Actor"/>
     </Declaration>
     <Declaration>
@@ -161,6 +155,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasEpisodeTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPetName"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasPlatformName"/>
@@ -298,27 +295,6 @@
         <Datatype IRI="http://dbpedia.org/ontology/Gender"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="Being"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasGender"/>
-            <Datatype IRI="http://dbpedia.org/ontology/Gender"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Being"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Fictional"/>
-        <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="#hasDescription"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Actor"/>
         <Class IRI="#Person"/>
     </SubClassOf>
@@ -404,17 +380,6 @@
         </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Character"/>
-        <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="#hasBirthdate"/>
-            <Datatype IRI="http://dbpedia.org/ontology/County"/>
-        </DataMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Event"/>
-        <Class IRI="#Plot"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Event"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasParticipants"/>
@@ -433,18 +398,6 @@
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InSeriesSeries"/>
-        <Class IRI="#Plot"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Job"/>
-        <Class IRI="#Plot"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Person"/>
-        <Class IRI="Being"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Person"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasNationality"/>
@@ -460,18 +413,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Pet"/>
-        <Class IRI="Being"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Pet"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="hasMaster"/>
             <Class IRI="#Character"/>
         </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Place"/>
-        <Class IRI="Fictional"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Place"/>
@@ -486,10 +431,6 @@
             <DataProperty IRI="hasPlatformName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Plot"/>
-        <Class IRI="Fictional"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Plot"/>
@@ -622,14 +563,6 @@
         </ObjectMinCardinality>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="Being"/>
-        <Class IRI="#Platform"/>
-        <Class IRI="#Plot"/>
-        <Class IRI="#Series"/>
-        <Class IRI="#TelevisionEpisode"/>
-        <Class IRI="#TelevisionSeason"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Actor"/>
         <Class IRI="#Character"/>
         <Class IRI="#InSeriesFictionalCharacter"/>
@@ -638,11 +571,20 @@
         <Class IRI="#Event"/>
         <Class IRI="#InSeriesSeries"/>
         <Class IRI="#Job"/>
-        <Class IRI="#Place"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Person"/>
         <Class IRI="#Pet"/>
+        <Class IRI="#Place"/>
+        <Class IRI="#Platform"/>
+        <Class IRI="#Plot"/>
+        <Class IRI="#Series"/>
+        <Class IRI="#TelevisionEpisode"/>
+        <Class IRI="#TelevisionSeason"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Event"/>
+        <Class IRI="#InSeriesSeries"/>
+        <Class IRI="#Job"/>
+        <Class IRI="#Place"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Character"/>
@@ -724,6 +666,28 @@
         <Class IRI="#TelevisionSeason"/>
         <NamedIndividual IRI="#Season9"/>
     </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="Joey"/>
+        <NamedIndividual IRI="MatLeBlanc"/>
+        <NamedIndividual IRI="NBC"/>
+        <NamedIndividual IRI="S03E21"/>
+        <NamedIndividual IRI="#CentralPerk"/>
+        <NamedIndividual IRI="#Chick"/>
+        <NamedIndividual IRI="#Friends"/>
+        <NamedIndividual IRI="#JenniferAniston"/>
+        <NamedIndividual IRI="#RachelGreen"/>
+        <NamedIndividual IRI="#S01E01"/>
+        <NamedIndividual IRI="#Season1"/>
+        <NamedIndividual IRI="#Season10"/>
+        <NamedIndividual IRI="#Season2"/>
+        <NamedIndividual IRI="#Season3"/>
+        <NamedIndividual IRI="#Season4"/>
+        <NamedIndividual IRI="#Season5"/>
+        <NamedIndividual IRI="#Season6"/>
+        <NamedIndividual IRI="#Season7"/>
+        <NamedIndividual IRI="#Season8"/>
+        <NamedIndividual IRI="#Season9"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="isMasterOf"/>
         <NamedIndividual IRI="Joey"/>
@@ -945,12 +909,7 @@
         <Literal>Central Perk</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasGender"/>
-        <NamedIndividual IRI="#Chick"/>
-        <Literal datatypeIRI="http://dbpedia.org/ontology/Gender">Male</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="hasPetName"/>
         <NamedIndividual IRI="#Chick"/>
         <Literal>Chick</Literal>
     </DataPropertyAssertion>
@@ -1128,6 +1087,10 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
+        <ObjectProperty IRI="hasMaster"/>
+        <ObjectProperty IRI="isMasterOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasEpisode"/>
         <ObjectProperty IRI="#isEpisodeOf"/>
     </InverseObjectProperties>
@@ -1263,7 +1226,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#participatesIn"/>
-        <Class IRI="Being"/>
+        <Class IRI="#Character"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#takesPlaceIn"/>
@@ -1311,10 +1274,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasParticipants"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasParticipants"/>
-            <Class IRI="Being"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="#Character"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSeason"/>
@@ -1368,6 +1328,10 @@
         <ObjectProperty IRI="https://dbpedia.org/ontology/portrayer"/>
         <Class IRI="#Actor"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasPetName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="hasEpisodeSynopsis"/>
         <Class IRI="#TelevisionEpisode"/>
@@ -1377,12 +1341,16 @@
         <Class IRI="#TelevisionEpisode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="hasPetName"/>
+        <Class IRI="#Pet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="hasPlatformName"/>
         <Class IRI="#Platform"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasBirthdate"/>
-        <Class IRI="Being"/>
+        <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasDescription"/>
@@ -1402,7 +1370,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasGender"/>
-        <Class IRI="Being"/>
+        <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasGenre"/>
@@ -1410,7 +1378,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasName"/>
-        <Class IRI="Being"/>
+        <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasNationality"/>
@@ -1450,6 +1418,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasEpisodeTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPetName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1522,11 +1494,6 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Being</IRI>
-        <Literal xml:lang="en">Human or other kind of animal beings</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>CharacterAppearsInEpisode</IRI>
         <Literal xml:lang="en">This character appears in that episode</Literal>
     </AnnotationAssertion>
@@ -1534,11 +1501,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>EpisdodeHasCharacter</IRI>
         <Literal xml:lang="en">In this episode appears that character</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Fictional</IRI>
-        <Literal xml:lang="en">Not in real world</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
