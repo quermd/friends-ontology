@@ -33,7 +33,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:license"/>
-        <Literal>http://creativecommons.org/licenses/by/2.0/</Literal>
+        <IRI>http://creativecommons.org/licenses/by/2.0/</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
@@ -926,7 +926,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasSynopsis"/>
         <NamedIndividual IRI="#Friends"/>
-        <Literal>Episodes depict the friends&apos; comedic and romantic adventures and career issues, such as Joey auditioning for roles or Rachel seeking jobs in the fashion industry. The six characters each have many dates and serious relationships, such as Monica with Richard Burke and Ross with Emily Waltham. Ross and Rachel&apos;s intermittent relationship is the most often-recurring storyline; during the ten seasons of the show, they repeatedly date and break up. Over the course of the series, Ross briefly marries Emily, Ross and Rachel have a child together after a one-night stand, Chandler and Monica date and marry each other, and Phoebe marries Mike Hannigan. Other frequently recurring characters include Ross and Monica&apos;s parents Jack and Judy Geller from Long Island; Ross&apos;s ex-wife Carol Willick, their son Ben Geller, and Carol&apos;s lesbian partner Susan Bunch; Central Perk barista Gunther; Chandler&apos;s extremely annoying and obnoxious but good-natured ex-girlfriend Janice Goralnik; and Phoebe&apos;s evil twin sister Ursula.</Literal>
+        <Literal>Episodes depict the friends comedic and romantic adventures and career issues.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasTitle"/>
