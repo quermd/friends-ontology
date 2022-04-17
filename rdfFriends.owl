@@ -197,6 +197,7 @@
     <!-- http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/hasWorker -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/hasWorker">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#worksIn"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Job"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Character"/>
     </owl:ObjectProperty>
@@ -217,7 +218,40 @@
     <!-- http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/jobsPlace -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/jobsPlace">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/placeJob"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/placeJob -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/placeJob">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Job"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/placeWorker -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/placeWorker">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/worksInPlace"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/worksInPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/worksInPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Character"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Place"/>
     </owl:ObjectProperty>
     
@@ -406,7 +440,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#worksIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Character"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/quer/ontologies/2022/3/Friends-ontology/#Job"/>
         <rdfs:comment xml:lang="en">this individual works in that place</rdfs:comment>
     </owl:ObjectProperty>
     
