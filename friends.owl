@@ -43,6 +43,9 @@
         <Class IRI="Being"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Fictional"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Actor"/>
     </Declaration>
     <Declaration>
@@ -235,9 +238,6 @@
         <NamedIndividual IRI="#JenniferAniston"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Presentation"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#RachelGreen"/>
     </Declaration>
     <Declaration>
@@ -301,7 +301,7 @@
         <Class IRI="Being"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasGender"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype IRI="http://dbpedia.org/ontology/Gender"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -310,6 +310,13 @@
             <DataProperty IRI="#hasName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Fictional"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#hasDescription"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Actor"/>
@@ -415,13 +422,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Event"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#takesPlaceIn"/>
-            <Class IRI="#Place"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#InSeriesFictionalCharacter"/>
         <Class IRI="#Person"/>
     </SubClassOf>
@@ -439,13 +439,6 @@
     <SubClassOf>
         <Class IRI="#Job"/>
         <Class IRI="#Plot"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Job"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#takesPlaceIn"/>
-            <Class IRI="#Place"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Person"/>
@@ -478,7 +471,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Place"/>
-        <Class IRI="#Plot"/>
+        <Class IRI="Fictional"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Place"/>
@@ -490,16 +483,20 @@
     <SubClassOf>
         <Class IRI="#Platform"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasName"/>
+            <DataProperty IRI="hasPlatformName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Plot"/>
-        <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="#hasDescription"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataMaxCardinality>
+        <Class IRI="Fictional"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#takesPlaceIn"/>
+            <Class IRI="#Place"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Series"/>
@@ -546,22 +543,22 @@
     <SubClassOf>
         <Class IRI="#TelevisionEpisode"/>
         <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasEpisodeSynopsis"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TelevisionEpisode"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasEpisodeTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TelevisionEpisode"/>
+        <DataExactCardinality cardinality="1">
             <DataProperty IRI="#hasEmissionDate"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TelevisionEpisode"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasSynopsis"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TelevisionEpisode"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasTitle"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -680,10 +677,6 @@
         <NamedIndividual IRI="#JenniferAniston"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Event"/>
-        <NamedIndividual IRI="#Presentation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Character"/>
         <NamedIndividual IRI="#RachelGreen"/>
     </ClassAssertion>
@@ -731,29 +724,6 @@
         <Class IRI="#TelevisionSeason"/>
         <NamedIndividual IRI="#Season9"/>
     </ClassAssertion>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="Joey"/>
-        <NamedIndividual IRI="MatLeBlanc"/>
-        <NamedIndividual IRI="NBC"/>
-        <NamedIndividual IRI="S03E21"/>
-        <NamedIndividual IRI="#CentralPerk"/>
-        <NamedIndividual IRI="#Chick"/>
-        <NamedIndividual IRI="#Friends"/>
-        <NamedIndividual IRI="#JenniferAniston"/>
-        <NamedIndividual IRI="#Presentation"/>
-        <NamedIndividual IRI="#RachelGreen"/>
-        <NamedIndividual IRI="#S01E01"/>
-        <NamedIndividual IRI="#Season1"/>
-        <NamedIndividual IRI="#Season10"/>
-        <NamedIndividual IRI="#Season2"/>
-        <NamedIndividual IRI="#Season3"/>
-        <NamedIndividual IRI="#Season4"/>
-        <NamedIndividual IRI="#Season5"/>
-        <NamedIndividual IRI="#Season6"/>
-        <NamedIndividual IRI="#Season7"/>
-        <NamedIndividual IRI="#Season8"/>
-        <NamedIndividual IRI="#Season9"/>
-    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="isMasterOf"/>
         <NamedIndividual IRI="Joey"/>
@@ -838,16 +808,6 @@
         <ObjectProperty IRI="#isPortraierOf"/>
         <NamedIndividual IRI="#JenniferAniston"/>
         <NamedIndividual IRI="#RachelGreen"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParticipants"/>
-        <NamedIndividual IRI="#Presentation"/>
-        <NamedIndividual IRI="#RachelGreen"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#takesPlaceIn"/>
-        <NamedIndividual IRI="#Presentation"/>
-        <NamedIndividual IRI="#CentralPerk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isFriendOf"/>
@@ -940,6 +900,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1967-07-25T00:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="MatLeBlanc"/>
+        <Literal datatypeIRI="http://dbpedia.org/ontology/Gender">Male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="MatLeBlanc"/>
         <Literal>Matthew Steven &quot;Matt&quot; LeBlanc</Literal>
@@ -1015,14 +980,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1969-02-11T00:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#JenniferAniston"/>
+        <Literal datatypeIRI="http://dbpedia.org/ontology/Gender">Female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#JenniferAniston"/>
         <Literal>Jennifer Aniston</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#Presentation"/>
-        <Literal>After leaving her fiancé, Barry, at the altar, Rachel finds herself in Central Perk Café, soaking wet in her wedding dress, looking for her old friend Monica. Rachel ends up moving into Monica&apos;s New York apartment. Chandler and Joey, who live across the hall from Monica, console Ross after his wife Carol, has just left him for a woman. Monica, a chef, falls for &quot;Paul the Wine Guy&quot; only to be crushed that their night of passion was merely a one-night stand. The gang urge Rachel to be more independent by cutting up her father&apos;s credit cards. Rachel, who has never worked before, is offered a waitress job at Central Perk. Ross, who has had a crush on Rachel since high school, asks her out.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasGender"/>
@@ -1569,6 +1534,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>EpisdodeHasCharacter</IRI>
         <Literal xml:lang="en">In this episode appears that character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Fictional</IRI>
+        <Literal xml:lang="en">Not in real world</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
